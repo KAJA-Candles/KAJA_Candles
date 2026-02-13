@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KAJA – Unique Smelling Candles</title>
+  <style>
+    :root {
+      --bg: #fdf8f0;
+      --text: #3a2e1f;
+      --accent: #c68c53;
+      --accent-dark: #a66f3a;
+      --card: #fffaf0;
+      --glow: rgba(198, 140, 83, 0.25);
+    }
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(rgba(253,248,240,0.85), rgba(253,248,240,0.75)), url('https://images.unsplash.com/photo-1603006905886-9f9a4e1c1f6a?auto=format&fit=crop&q=80') center/cover;
+      color: var(--text);
+      text-align: center;
+      padding: 9rem 1rem 7rem;
+      position: relative;
+    }
+    .logo-container {
+      max-width: 300px;
+      margin: 0 auto 2rem;
+    }
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 0 40px var(--glow);
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 0.5rem 0;
+      color: var(--accent);
+      text-shadow: 0 4px 15px rgba(198,140,83,0.4);
+    }
+    header p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 1rem auto 0;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    section {
+      padding: 6rem 0;
+    }
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3.5rem;
+      color: var(--accent-dark);
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px var(--glow);
+      transition: all 0.4s ease;
+      text-align: center;
+      border: 1px solid rgba(198,140,83,0.15);
+    }
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 60px var(--glow);
+    }
+    .card img {
+      width: 100%;
+      height: 380px;
+      object-fit: contain;
+      background: var(--card);
+    }
+    .card-content {
+      padding: 2rem 1.5rem;
+    }
+    .card h3 {
+      margin: 0 0 0.8rem;
+      font-size: 1.8rem;
+      color: var(--accent-dark);
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--accent);
+      margin: 0.8rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #0f0c14;
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: var(--accent-dark);
+      transform: scale(1.06);
+    }
+    .aromas-menu {
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 700px;
+    }
+    .aromas-menu img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px var(--glow);
+    }
+    .aromas {
+      background: linear-gradient(to bottom, #fffaf0, #fdf8f0);
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .aromas ul {
+      list-style: none;
+      padding: 0;
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      columns: 2;
+      -webkit-columns: 2;
+      column-gap: 3rem;
+    }
+    .aromas li {
+      margin: 1.2rem 0;
+      break-inside: avoid;
+    }
+    .about {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .contact {
+      text-align: center;
+      background: linear-gradient(135deg, #fffaf0, #fdf8f0);
+      padding: 7rem 1rem;
+    }
+    .social a {
+      color: var(--accent-dark);
+      font-size: 1.8rem;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .social a:hover { color: var(--accent); }
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #3a2e1f;
+      color: #e8d9c0;
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 3rem; }
+      .aromas ul { columns: 1; -webkit-columns: 1; }
+      .aromas-menu img { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/1f2yr13q/630113379-17848145850681087-5590177986918221015-n.jpg" alt="KAJA Logo">
+    </div>
+    <h1>KAJA</h1>
+    <p>Unique Smelling Candles • Рачно изработени со љубов и магија</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Наши уникатни форми</h2>
+      <div class="products">
+
+        <div class="card">
+          <img src="https://i.ibb.co/rGD6pmmJ/fe81bfeb-71c3-42c1-a04b-6584a80c24f7.jpg" alt="Роденденска торта">
+          <div class="card-content">
+            <h3>Роденденска торта</h3>
+            <p></p>
+            <div class="price">400 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.ibb.co/9mMZZKCR/6f3dbcdc-0438-4382-aea4-bda8ef5d060d.jpg" alt="Мини љубовна торта">
+          <div class="card-content">
+            <h3>Мини љубовна торта</h3>
+            <p></p>
+            <div class="price">300 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.ibb.co/d4TJp94n/f0ccf5fd-20cb-4cf4-958b-385d3862c9cf.jpg" alt="Букет">
+          <div class="card-content">
+            <h3>Букет</h3>
+            <p></p>
+            <div class="price">250 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.ibb.co/4Z7nbYgS/db48ed6e-f4a1-44cd-b193-d3f6905e2884.jpg" alt="Lemon Paradise">
+          <div class="card-content">
+            <h3>Lemon Paradise</h3>
+            <p></p>
+            <div class="price">400 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.ibb.co/MxRy7BL3/cf44c322-0455-41e0-b222-dfc354a2db30.jpg" alt="Sprinkle Delight">
+          <div class="card-content">
+            <h3>Sprinkle Delight</h3>
+            <p></p>
+            <div class="price">400 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.ibb.co/mrCsgvJ8/e8d31bef-3fb2-4f17-a5ac-19d4a7dc7db9.jpg" alt="Soft Peony">
+          <div class="card-content">
+            <h3>Soft Peony</h3>
+            <p></p>
+            <div class="price">400 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.ibb.co/rKKbq0hK/626205581-17848712043681087-4731714383552279553-n.jpg" alt="Soft Elegance">
+          <div class="card-content">
+            <h3>Soft Elegance</h3>
+            <p></p>
+            <div class="price">250 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.ibb.co/Ldw5J5fY/627666429-17849293188681087-4743294776099263507-n.jpg" alt="Букет - Восочна љубов">
+          <div class="card-content">
+            <h3>Букет - Восочна љубов</h3>
+            <p></p>
+            <div class="price">550 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.ibb.co/fVnJdCff/625009105-2388747354962012-3769145872047753727-n.jpg" alt="Слатко Мече">
+          <div class="card-content">
+            <h3>Слатко Мече</h3>
+            <div class="price">400 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <!-- New - Blush Martini (now working link) -->
+        <div class="card">
+          <img src="https://i.ibb.co/6chFmHfz/625860241-3920138464955338-4340778111715406179-n.jpg" alt="Blush Martini">
+          <div class="card-content">
+            <h3>Blush Martini</h3>
+            <div class="price">400 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+        <!-- New - Crystal Bloom (now working link) -->
+        <div class="card">
+          <img src="https://i.ibb.co/zhSpLC5r/616169132-760121120501002-2650345536273300032-n.jpg" alt="Crystal Bloom">
+          <div class="card-content">
+            <h3>Crystal Bloom</h3>
+            <div class="price">400 ден</div>
+            <a href="https://instagram.com/kajacandles.mk" class="btn">Порачај во DM</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="aromas">
+      <h2>Достапни ароми</h2>
+      <div class="aromas-menu">
+        <img src="https://i.ibb.co/0p9BMPyc/9967a30f-d2a2-4033-8185-bbc8b6f40441.jpg" alt="Мени со ароми">
+      </div>
+      <ul>
+        <li>🍓 Јагода</li>
+        <li>🌹 Ружа</li>
+        <li>🍎 Јаболко и цимет</li>
+        <li>🖤 Black Vanilla</li>
+        <li>🍨 Ванила</li>
+        <li>🍮 Карамела</li>
+        <li>🌸 Лаванда</li>
+        <li>🌺 Допир нежност</li>
+        <li>🍰 Тирамису</li>
+        <li>🌸 Мистрал (јасмин, зумбул, ружа)</li>
+        <li>✨ Параваера</li>
+      </ul>
+    </section>
+
+    <section class="about">
+      <h2>Изработено со магија</h2>
+      <p style="max-width: 800px; margin: 0 auto; font-size: 1.3rem;">
+        KAJA-каде што мирисите стануваат моменти.Рачно изработени свеќи со уникатни ноти.
+      </p>
+    </section>
+
+  </div>
+
+  <section class="contact">
+    <h2>Контактирај не</h2>
+    <p>Прашања? Нарачки? Само пиши!</p>
+    <div class="social">
+      <a href="https://instagram.com/kajacandles.mk">Instagram:@kajacandles.mk</a>
+      <a href="https://www.facebook.com/share/1C8kMqK82q/?mibextid=wwXIfr">Facebook:@KAJA candles.mk</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 KAJA – Unique Smelling Candles • Кавадарци</p>
+  </footer>
+
+</body>
+</html>
